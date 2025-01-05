@@ -9,7 +9,7 @@ The input for this script is a csv with three columns:
 * **parts** - The answers/secondary question parts
 * **image_ref** - TBD
  
-Numbering is automatic and is based on the order of the questions in the csv. If ```randomize_order``` is set to true, the rows will be shuffled before the exam is generated. Examples of tsv input can be found in ```exam1.tsv``` and markdown output can be found in ```exam_1.md```.
+Numbering is automatic and is based on the order of the questions in the csv. If ```randomize_order``` is set to true, the rows will be shuffled before the exam is generated. Examples of tsv input can be found at ```input/exam1.tsv``` and intermediate text/markdown outputs can be found in the intermediate_files folder. The output pdf file (after conversion) is ```exam_1.pdf```.
 
 ### Multiple choice questions
 In the class column, ```multiple``` refers to a multiple choice question. The question column will contain the question text and the parts column will contain the answers students can choose from, with each answer separated by a ```;```. 
@@ -32,4 +32,4 @@ The script also generates a YAML header for the markdown file, specifying a font
 Running ```generate_exam.py``` outputs a .txt file (with markdown syntax) capturing all questions in the input.
 
 ## Render to PDF
-I render the output text file to a PDF using pandoc on the command line with ```pandoc exam_1.txt -s -o exam_1.md|pandoc exam_1.md -s -o exam_1.pdf``` where exam_1.txt is the output file name defined in ```generate_exam.py```.
+I render the output text file to a PDF using pandoc on the command line with ```pandoc intermediate_files/exam_1.txt -s -o intermediate_files/exam_1.md|pandoc -f markdown intermediate_files/exam_1.md -t pdf -o exam_1.pdf``` where ```input/exam_1.txt``` is the output file name defined in ```generate_exam.py```.

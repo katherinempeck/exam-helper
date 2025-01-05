@@ -1,0 +1,75 @@
+---
+fontfamily: times
+geometry: margin=1in
+---
+Name:
+&nbsp;
+
+## **Course Name - Exam Name** *Semester Year* &nbsp;
+
+1\. Complicated question with multi parts?
+
+a. part 1
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+b. part 2
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+c. part 3
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+d. part 4
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+
+2\. Single short answer question?
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+
+3\. Multiple choice question?
+
+a. answer 4
+b. answer 3
+c. answer 1
+d. answer 2
+
+4\. Match each object to the definition
+
+a. row3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowd
+
+b. row2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowa
+
+c. row4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowc
+
+d. row1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowb
+

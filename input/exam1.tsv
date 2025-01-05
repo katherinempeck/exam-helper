@@ -1,5 +1,5 @@
 class	question	parts	image_ref
-multiple	Multiple choice question?	answer1;answer 2;answer 3;answer 4	
+multiple	Multiple choice question?	answer 1;answer 2;answer 3;answer 4	
 short-single	Single short answer question?		
 short-multi	Complicated question with multi parts?	part 1;part 2;part 3;part 4	
 match	Match each object to the definition	row1;row2;row3;row4|rowa;rowb;rowc;rowd	

@@ -7,8 +7,8 @@ randomize_question_order = True
 randomize_answer_order = True
 line_breaks_after_short = 6
 
-input = pd.read_csv("C:/Users/kathe/Documents/Github/pyexam/exam-helper/exam1.tsv", sep = '\t')
-output = 'exam_1.txt'
+input = pd.read_csv("input/exam1.tsv", sep = '\t')
+output = 'intermediate_files/exam_1.txt'
 
 #Run
 if randomize_question_order:
@@ -82,4 +82,4 @@ for index, row in input.iterrows():
             f.write('\n')
 
 #Convert with pandoc:
-#pandoc exam_1.txt -s -o exam_1.md|pandoc -f markdown exam_1.md -t pdf -o exam_1.pdf
+#pandoc intermediate_files/exam_1.txt -s -o intermediate_files/exam_1.md|pandoc -f markdown intermediate_files/exam_1.md -t pdf -o exam_1.pdf
