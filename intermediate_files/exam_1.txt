@@ -5,9 +5,30 @@ geometry: margin=1in
 Name:
 &nbsp;
 
-## **Course Name - Exam Name** *Semester Year* &nbsp;
+## **Python 101 - Quiz 1** *Spring 2025* &nbsp;
 
-1\. Complicated question with multi parts?
+1\. Multiple choice question?
+
+a. answer 2
+b. answer 3
+c. answer 1
+d. answer 4
+
+2\. Single short answer question?
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+
+3\. Complicated question with multi parts?
 
 a. part 1
 
@@ -42,34 +63,13 @@ d. part 4
 &nbsp;
 
 
-2\. Single short answer question?
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-
-3\. Multiple choice question?
-
-a. answer 4
-b. answer 3
-c. answer 1
-d. answer 2
-
 4\. Match each object to the definition
 
-a. row3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowd
+a. row1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowb
 
-b. row2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowa
+b. row4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowc
 
-c. row4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowc
+c. row2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowa
 
-d. row1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowb
+d. row3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowd
 

@@ -3,31 +3,43 @@ import random
 
 #Parameters
 
-randomize_question_order = True
+randomize_question_order = False
 randomize_answer_order = True
 line_breaks_after_short = 6
+course_name = 'Python 101'
+exam_name = 'Quiz 1'
+semester = 'Spring'
+year = '2025'
 
-input = pd.read_csv("input/exam1.tsv", sep = '\t')
-output = 'intermediate_files/exam_1.txt'
+input_file = "exam-helper/input/exam1.tsv"
+output_file = "exam-helper/intermediate_files/exam_1.txt"
 
 #Run
+#Should not need to change anything below this line if you're ok with the default heading and styles
+input = pd.read_csv(input_file, sep = '\t')
+output = output_file
+#Shuffle the TSV first to randomize questions (if parameter set to True)
 if randomize_question_order:
     input = input.sample(frac = 1, ignore_index = True)
 f = open(output, 'a', encoding="utf-8")
 
+#Write a YAML header to control the typesetting when converting to PDF
+#Right now, this just sets the font family to times and margins to 1 inch
 yamlheader = '''---
 fontfamily: times
 geometry: margin=1in
 ---'''
 f.write(yamlheader)
 
+#Write a simple exam header with a space for the student's name and a heading with the course name, exam name, and semester
 f.write('\nName:\n')
 f.write('&nbsp;\n')
 f.write('\n')
-f.write('## **Course Name - Exam Name** *Semester Year* ')
+f.write(f'## **{course_name} - {exam_name}** *{semester} {year}* ') #Calls variables defined in parameters section above
 f.write('&nbsp;\n')
 f.write('\n')
 
+#Iterate through the TSV and write each row as a question with specific formatting
 for index, row in input.iterrows():
     if row['class'] == 'multiple':
         q = row['question']
@@ -81,5 +93,7 @@ for index, row in input.iterrows():
             f.write(f'{lab}. {o} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ {d}\n')
             f.write('\n')
 
-#Convert with pandoc:
-#pandoc intermediate_files/exam_1.txt -s -o intermediate_files/exam_1.md|pandoc -f markdown intermediate_files/exam_1.md -t pdf -o exam_1.pdf
+#To convert with pandoc:
+#pandoc intermediate_files/exam_1.txt -s -o intermediate_files/exam_1.md
+#Then
+#pandoc -f markdown intermediate_files/exam_1.md -t pdf -o output/exam_1.pdf
