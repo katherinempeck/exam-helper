@@ -1,6 +1,6 @@
 # exam-helper
 ## Overview
-This simple Python script, given a TSV (tab delimited file) with a specific format (see below), generates a text file in markdown language formatting the rows in the tsv into a typical exam format. This is not the only project out there for quick exam typesetting (the [LaTeX exam class](https://www.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX) is a great option). But, if you have relatively simple exam formatting needs, want to be able to randomize questions and answers, and want to avoid repetitive copy/pasting in a word processor program, this repo might be a good option for you.
+This simple Python script, given a TSV (tab delimited file) with a specific format (see below), generates a text file in markdown language formatting the rows in the tsv into a typical exam format. This is not the only project out there for quick exam typesetting (the [LaTeX exam class](https://www.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX) is a great option). But, if you have relatively simple exam formatting needs, want to be able to randomize questions and answers, and want to avoid repetitive copy/pasting, this repo might be a good option for you.
 
 ## Requirements
 * [Pandas](https://pandas.pydata.org/) (I wrote this using 2.0.3)
@@ -14,9 +14,9 @@ The input for this script is a tsv with three columns:
 * **image_ref** - TBD
 * **pts** - TBD
 
-TSVs can be created, for example, by exporting a .txt file (tab delimited) from Excel and changing the file extension on the exported file.
+TSVs can be created, for example, by exporting a .txt file (tab delimited) from Excel and changing the file extension on the exported file. 
  
-Numbering in the output file is automatic and is based on the order of the questions in the tsv. If ```randomize_order``` is set to true, the rows will be shuffled before the exam is generated. Examples of tsv input can be found at ```input/exam1.tsv``` and intermediate text/markdown outputs can be found in the intermediate_files folder. The output pdf file (after conversion) is ```exam_1.pdf```.
+Numbering in the output file is automatic and is based on the order of the questions in the tsv. If ```randomize_order``` is set to true, the rows will be shuffled before the exam is generated. An example TSV input can be found at ```input/exam1.tsv``` and intermediate text/markdown outputs can be found in the intermediate_files folder. The output pdf file (after conversion) is ```exam_1.pdf```.
 
 ### Multiple choice questions
 In the class column, ```multiple``` refers to a multiple choice question. The question column will contain the question text and the parts column will contain the answers students can choose from, with each answer separated by a ```;```. 
@@ -39,9 +39,9 @@ The script also generates a YAML header for the markdown file, specifying a font
 Running ```generate_exam.py``` outputs a .txt file (with markdown syntax) capturing all questions in the input.
 
 ## Render to PDF
-Render the output text file to a markdown file using pandoc on the command line with ```pandoc intermediate_files/exam_1.txt -s -o intermediate_files/exam_1.md```. Then, convert the markdown to your desired output format using ```pandoc -f markdown intermediate_files/exam_1.md -t pdf -o exam_1.pdf``` where ```input/exam_1.txt``` is the output file name defined in ```generate_exam.py```.
+Render the output text file to a markdown file using pandoc on the command line with ```pandoc intermediate_files/exam_1.txt -s -o intermediate_files/exam_1.md``` where ```intermediate_files/exam_1.txt``` is the output file name defined by ```generate_exam.py```. Then, convert the markdown to your desired output format using ```pandoc -f markdown intermediate_files/exam_1.md -t pdf -o exam_1.pdf```.  
 
 ## Other considerations
 * Currently, this script does not have a good way to control for page breaks/dangling lines ("widows and orphans"). Converting to .docx or .odt rather than PDF allows for additional easy typesetting options like this (while still removing repetitive formatting tasks). 
-* In the future, support will be added for linking included images using the image_ref column in the TSV.
-* Currently, the **pts** column has no effect on exam typesetting and is simply included as a way for the user to track point totals.
+* In the future, support will be added for linking included images using the image_ref column in the TSV. Right now, if you'd like to work with images, I recommend exporting to .docx, .odt, or .tex and manually adding them where needed.
+* Currently, the **pts** column has no effect on exam typesetting and is simply included as a way for the user to track point totals. 
