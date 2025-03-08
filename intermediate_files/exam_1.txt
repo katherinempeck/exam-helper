@@ -73,3 +73,78 @@ c. row2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __
 
 d. row3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowd
 
+---
+fontfamily: times
+geometry: margin=1in
+---
+Name:
+&nbsp;
+
+## **Python 101 - Quiz 1** *Spring 2025* &nbsp;
+
+1\. Multiple choice question?
+
+a. answer 1
+b. answer 2
+c. answer 3
+d. answer 4
+
+2\. Single short answer question?
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+
+3\. Complicated question with multi parts?
+
+a. part 1
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+b. part 2
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+c. part 3
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+d. part 4
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+
+4\. Match each object to the definition
+
+a. row4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowb
+
+b. row2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowc
+
+c. row3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowd
+
+d. row1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ rowa
+

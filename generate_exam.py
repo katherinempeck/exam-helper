@@ -11,8 +11,8 @@ exam_name = 'Quiz 1'
 semester = 'Spring'
 year = '2025'
 
-input_file = "exam-helper/input/exam1.tsv"
-output_file = "exam-helper/intermediate_files/exam_1.txt"
+input_file = "input/exam1.tsv"
+output_file = "intermediate_files/exam_1.txt"
 
 #Run
 #Should not need to change anything below this line if you're ok with the default heading and styles

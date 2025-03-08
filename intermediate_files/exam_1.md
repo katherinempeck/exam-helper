@@ -69,3 +69,70 @@ b.  row4                     \_\_\_\_ rowc
 c.  row2                     \_\_\_\_ rowa
 
 d.  row3                     \_\_\_\_ rowd
+
+Name:  
+
+## **Python 101 - Quiz 1** *Spring 2025*  
+
+1\. Multiple choice question?
+
+a.  answer 1
+b.  answer 2
+c.  answer 3
+d.  answer 4
+
+2\. Single short answer question?  
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+3\. Complicated question with multi parts?
+
+a.  part 1
+
+ 
+
+ 
+
+ 
+
+b.  part 2
+
+ 
+
+ 
+
+ 
+
+c.  part 3
+
+ 
+
+ 
+
+ 
+
+d.  part 4
+
+ 
+
+ 
+
+ 
+
+4\. Match each object to the definition
+
+a.  row4                     \_\_\_\_ rowb
+
+b.  row2                     \_\_\_\_ rowc
+
+c.  row3                     \_\_\_\_ rowd
+
+d.  row1                     \_\_\_\_ rowa
