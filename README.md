@@ -35,8 +35,19 @@ The attribute ```line_breaks_after_short``` determines how many line breaks are 
 ## Other formatting options
 The script also generates a YAML header for the markdown file, specifying a font family of Times New Roman and a 1 inch margin. Other attributes could be added within the ```yamlheader``` variable to make other global adjustments to formatting.
 
-## Output
-Running ```generate_exam.py``` outputs a .txt file (with markdown syntax) capturing all questions in the input.
+## Running the script
+The repository contains two scripts. Running ```generate_exam.py``` outputs a .txt file (with markdown syntax) capturing all questions in the input. To run, open the script in a Python environment with the required libraries installed. Then, edit the variables under the ```#Parameters``` header to match your input file, output file, and other attributes (e.g., course name).
+
+Alternatively, the script ```generate_exam_CLI.py``` lets you run the script directly from the command line without having to edit the script. Open a terminal instance and activate your Python environment with the required libraries installed (I recommend Anaconda/Miniconda for managing Python libraries, but you can also use the ```venv``` module which is built in). Navigate to the folder containing the ```generate_exam_CLI.py``` script (i.e., this cloned repository). Then, run the command ```python generate_exam_CLI.py -i input.tsv -o output.txt``` replacing ```input.tsv``` with the filepath to your input file and replacing output.txt with the filename/location for saving your output text file. The ```-i``` and ```-o``` attributes are the minimum parameters you have to provide for the script to run. You can also set additional attributes:
+
+* ```-rq```, randomize questions. Defaults to False. 
+* ```-ra```, randomize answers. Defaults to False.
+* ```-c```, course name. Defaults to "coursename" (this can be edited later in the text/markdown file, or set here)
+* ```-e```, exam name. Defaults to "examname."
+* ```-s```, semester. Defaults to "semester."
+* ```-y```, year. Defaults to the current year (calculated using the ```datetime``` library).
+
+For instance, running ```python generate_exam_CLI.py -i input.tsv -o output.txt` -rq True -c "Python 101"``` would generate the exam with randomized questions and a course name of "Python 101" (note that strings with spaces in them need to be enclosed in ""). 
 
 ## Render to PDF
 Render the output text file to a markdown file using pandoc on the command line with ```pandoc intermediate_files/exam_1.txt -s -o intermediate_files/exam_1.md``` where ```intermediate_files/exam_1.txt``` is the output file name defined by ```generate_exam.py```. Then, convert the markdown to your desired output format using ```pandoc -f markdown intermediate_files/exam_1.md -t pdf -o exam_1.pdf```.  

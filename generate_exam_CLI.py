@@ -1,18 +1,43 @@
 import pandas as pd
 import random
+import argparse
+import sys
+from datetime import datetime
+
+#Setup argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('-rq', '--randomizequestion', default = False)
+parser.add_argument('-ra', '--randomizeanswers', default = True)
+parser.add_argument('-lb', '--linebreaks', default = 6)
+parser.add_argument('-c', '--coursename', default = 'coursename')
+parser.add_argument('-e', '--examname', default = 'examname')
+parser.add_argument('-s', '--semester', default = 'semester')
+parser.add_argument('-y', '--year', default = datetime.now().year)
+parser.add_argument('-i', '--input')
+parser.add_argument('-o', '--output')
+
+args = parser.parse_args()
+
+if args.input == None:
+    print('Input file not specified. No output generated.')
+    sys.exit()
+
+if args.output == None:
+    print('Output file not specified. No output generated.')
+    sys.exit()
 
 #Parameters
 
-randomize_question_order = False
-randomize_answer_order = True
-line_breaks_after_short = 6
-course_name = 'Python 101'
-exam_name = 'Quiz 1'
-semester = 'Spring'
-year = '2025'
+randomize_question_order = args.randomizequestion
+randomize_answer_order = args.randomizeanswers
+line_breaks_after_short = args.linebreaks
+course_name = args.coursename
+exam_name = args.examname
+semester = args.semester
+year = args.year
 
-input_file = "input/exam1.tsv"
-output_file = "intermediate_files/exam_1.txt"
+input_file = args.input
+output_file = args.output
 
 #Run
 #Should not need to change anything below this line if you're ok with the default heading and styles
@@ -93,7 +118,6 @@ for index, row in input.iterrows():
             f.write(f'{lab}. {o} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ____ {d}\n')
             f.write('\n')
 
-#To convert with pandoc:
-#pandoc intermediate_files/exam_1.txt -s -o intermediate_files/exam_1.md
-#Then
-#pandoc -f markdown intermediate_files/exam_1.md -t pdf -o output/exam_1.pdf
+print(f'Exam text generated and available at {output_file}.')
+print(f'To convert with pandoc, run pandoc {output_file} -s -o exam_1.md')
+print('Then, run pandoc -f markdown exam_1.md -t pdf -o exam_1.pdf')
